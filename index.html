@@ -1,10 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio 1</title>
+    <title>Meu Portfólio de Projetos</title>
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --cor-principal: #000033; /* Azul Marinho Escuro */
+            --cor-secundaria: #0A0A0A; /* Preto Quase Pura */
+            --cor-destaque: #0077B6; /* Azul Claro para Destaque/Links */
+            --cor-texto-claro: #FFFFFF; /* Branco */
+            --cor-fundo-secao: #1A1A1A; /* Cinza Escuro para Seções */
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto-claro);
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho e Navegação */
+        header {
+            background-color: var(--cor-principal);
+            padding: 20px 0;
+            border-bottom: 3px solid var(--cor-destaque);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+        }
+
+        nav ul li a:hover {
+            color: var(--cor-destaque);
+            border-bottom: 2px solid var(--cor-destaque);
+        }
+
+        /* Espaço para Imagem no Canto Superior Direito (dentro do header) */
+        .profile-space {
+            width: 100px;
+            height: 100px;
+            background-color: var(--cor-fundo-secao);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--cor-destaque);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            text-align: center;
+            flex-shrink: 0; /* Impede o encolhimento */
+        }
+
+        .profile-space img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #projetos {
+            background-color: var(--cor-fundo-secao);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--cor-destaque);
+            border-bottom: 2px solid var(--cor-texto-claro);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .projeto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .projeto-item {
+            background-color: var(--cor-principal);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .projeto-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        .projeto-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: var(--cor-secundaria);
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-destaque);
+            font-weight: bold;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cor-principal);
+            color: var(--cor-texto-claro);
+            text-align: center;
+            padding: 30px 0;
+            border-top: 3px solid var(--cor-destaque);
+        }
+
+        .social-links a {
+            color: var(--cor-texto-claro);
+            font-size: 1.8em;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--cor-destaque);
+        }
+    </style>
 </head>
+<body>
+
+    <header>
+        <div class="container hero-header">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            
+            <a href="#" class="logo">Seu Nome/Portfólio</a>
+
+            <div class="profile-space" title="Espaço para sua foto">
+                Foto
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="container">
+            <h2>👋 Sobre Mim</h2>
+            <p>
+                [TEXTO PLACEHOLDER]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p>
+                [TEXTO PLACEHOLDER]: Sou um(a) desenvolvedor(a) focado(a) em criar soluções eficientes e inovadoras. Veja abaixo alguns dos meus principais projetos.
+            </p>
+        </section>
+
+        <section id="projetos">
+            <div class="container">
+                <h2>🛠️ Meus Projetos</h2>
+                <div class="projeto-grid">
+                    
+                    <div class="projeto-item">
+                        <div class="projeto-img-placeholder">
+                            [Espaço para Imagem do Projeto 1]
+                        </div>
+                        <h3>Nome do Projeto 1</h3>
+                        <p>
+                            [TEXTO PLACEHOLDER]: Breve descrição do projeto, tecnologias utilizadas (Ex: HTML, CSS, JavaScript) e o problema que resolveu.
+                        </p>
+                        <a href="#" style="color: var(--cor-destaque);">Ver Projeto &gt;</a>
+                    </div>
+                    
+                    <div class="projeto-item">
+                        <div class="projeto-img-placeholder">
+                            [Espaço para Imagem do Projeto 2]
+                        </div>
+                        <h3>Nome do Projeto 2</h3>
+                        <p>
+                            [TEXTO PLACEHOLDER]: Breve descrição do projeto, tecnologias utilizadas (Ex: React, Node.js) e os resultados alcançados.
+                        </p>
+                        <a href="#" style="color: var(--cor-destaque);">Ver Projeto &gt;</a>
+                    </div>
+                    
+                    <div class="projeto-item">
+                        <div class="projeto-img-placeholder">
+                            [Espaço para Imagem do Projeto 3]
+                        </div>
+                        <h3>Nome do Projeto 3</h3>
+                        <p>
+                            [TEXTO PLACEHOLDER]: Breve descrição do projeto, tecnologias utilizadas (Ex: Python, Django) e como ele funciona.
+                        </p>
+                        <a href="#" style="color: var(--cor-destaque);">Ver Projeto &gt;</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="container">
+            <h2>📧 Contato</h2>
+            <p>
+                [TEXTO PLACEHOLDER]: Gostaria de conversar sobre seu próximo projeto? Entre em contato comigo! Use o rodapé ou envie um email para <strong>seu.email@exemplo.com</strong>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="[Link do LinkedIn]" target="_blank" title="LinkedIn">in</a>
+                <a href="[Link do GitHub]" target="_blank" title="GitHub">Gh</a>
+                <a href="[Link do Twitter/X]" target="_blank" title="Twitter/X">X</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
